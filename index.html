@@ -1,18 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#10110f" />
+        <title>Lesson 001 — HTML Headings Quiz</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="app">
+            <header class="topbar">
+                <a href="#" class="logo">
+                    <span class="logo-mark">&lt;/&gt;</span>
+                    <span>CODE<span class="logo-light">LAB</span></span>
+                </a>
+                <span class="lesson-tag">LESSON 001</span>
+            </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+            <main>
+                <section class="intro">
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        FRONTEND FUNDAMENTALS
+                    </div>
 
-<body>
-    start
+                    <h1>HTML <span>HEADINGS</span><sup>01</sup></h1>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+                    <p class="intro-text">
+                        Six levels. One hierarchy. How well do you know the
+                        building blocks of the web?
+                    </p>
 
+                    <div class="intro-meta">
+                        <span>20 QUESTIONS</span>
+                        <span class="meta-divider"></span>
+                        <span>HTML / BASICS</span>
+                        <span class="meta-divider"></span>
+                        <span>SELF TEST</span>
+                    </div>
+                </section>
+
+                <section class="quiz-card" id="quizCard">
+                    <div class="quiz-top">
+                        <div>
+                            <span class="small-label">YOUR PROGRESS</span>
+                            <p class="progress-text">
+                                Question <span id="currentNumber">1</span>
+                                <span class="muted">/ 20</span>
+                            </p>
+                        </div>
+
+                        <div class="score-box">
+                            <span class="small-label">SCORE</span>
+                            <p>
+                                <span id="score">0</span
+                                ><span class="muted"> pts</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <div id="questionArea">
+                        <!-- JavaScript inserts the current question here. -->
+                    </div>
+
+                    <div class="quiz-actions">
+                        <span class="keyboard-hint">TAKE YOUR TIME.</span>
+                        <button class="primary-btn" id="checkBtn" type="button">
+                            Check answer <span>↗</span>
+                        </button>
+                    </div>
+
+                    <div
+                        class="feedback"
+                        id="feedback"
+                        aria-live="polite"
+                        hidden
+                    ></div>
+
+                    <div class="next-row" id="nextRow" hidden>
+                        <span id="answerStatus"></span>
+                        <button class="primary-btn" id="nextBtn" type="button">
+                            Next question <span>→</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="result-card" id="resultCard" hidden>
+                    <div class="result-icon" id="resultIcon">✳</div>
+                    <p class="eyebrow">QUIZ COMPLETED</p>
+                    <h2 id="resultTitle">NICE WORK.</h2>
+                    <p class="result-description" id="resultDescription"></p>
+
+                    <div class="result-stats">
+                        <div>
+                            <span class="small-label">FINAL SCORE</span>
+                            <p id="finalScore">0 / 20</p>
+                        </div>
+                        <div>
+                            <span class="small-label">ACCURACY</span>
+                            <p id="accuracy">0%</p>
+                        </div>
+                        <div>
+                            <span class="small-label">CORRECT</span>
+                            <p id="correctCount">0 / 20</p>
+                        </div>
+                    </div>
+
+                    <button
+                        class="primary-btn restart-btn"
+                        id="restartBtn"
+                        type="button"
+                    >
+                        ↻ Restart with random questions
+                    </button>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <span>LEARN BY BUILDING.</span>
+                <span>HTML BASICS <span class="footer-dot">●</span> 001</span>
+            </footer>
+        </div>
+
+        <script type="module" src="./assets/js/main.js"></script>
+    </body>
 </html>
